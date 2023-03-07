@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Jordane Lepart, développeur web</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('SmVdG_NbWIQJJEI67');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_de0jc0e','template_wz1wkjy', this)
+                    .then(function(res) {
+                        console.log('SUCCESS!', res.status, res.text);
+						document.getElementById('success').classList.add('i-b')
+						document.getElementById('submit').disabled = true;
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+  </head>
+  <body class="is-preload">
+    <!-- Header -->
+    <header id="header">
+      <div class="inner">
+        <a href="#" class="image avatar"><img src="images/me.webp" alt="" /></a>
+        <h1>
+          <strong>Jordane Lepart</strong>, a friendly<br />
+          front-end developer learning
+          <br />blockchain and web 3 development.
+        </h1>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <div id="main">
+      <!-- One -->
+      <section id="one">
+        <header class="major">
+          <h2 class="brand bold">Everybody wants this kind of teammate !</h2>
+        </header>
+        <p>
+          Get involved in team work project sharing ideas, knowledge and laugh
+          define my kind of job. <br />I need to improve myself everyday and for
+          that I thought Blockchain environment might be my next challenge cause
+          I love decentralized thinking end I believe in its necessary
+          devlopment. So yesterday, I asked for help from Eat-The-Blocks to do
+          training and I jumped on board. You can check here my resume and all
+          my work in this website before I can exposed my learning progress.
+          <br />I have ambition to share my skills with a company wich can
+          detect mutual benefits working together.
+        </p>
+        <!--<ul class="actions">
+							<li><a href="#" class="button">See CV</a></li>
+						</ul>!-->
+      </section>
+
+      <!-- Two -->
+      <section id="two">
+        <h2 class="brand bold">Recent Work</h2>
+        <div class="row">
+          <article class="col-6 col-12-xsmall work-item ">
+            <div class="image fit">
+              <img src="images/fulls/mesvo.webp" alt="mesvolontes.net" class="" />
+            </div>
+            <div class="info">
+              <h3 class="bold mt-1 mesvo">MesVolontes.net</h3>
+              <h5>
+                Proposing, personal messages and partner app with
+                sponsoring and prospects list.
+              </h5>
+              <hr />
+              <div class="row">
+                <div class="col-3">
+                  <p>Stack :</p>
+                </div>
+                <div class="col-2">
+                  <img width="100%" src="images/icons/nuxt.png" alt="NuxtJs" />
+                </div>
+                <div class="col-2">
+                  <img
+                    width="100%"
+                    src="images/icons/tailwind.png"
+                    alt="TailwindCss"
+                  />
+                </div>
+                <div class="col-2">
+                  <img width="100%" src="images/icons/mongo.png" alt="MongoDb" />
+                </div>
+                <div class="col-2">
+                  <img width="100%" src="images/icons/node.png" alt="NodeJs" />
+                </div>
+              </div>
+				<a class="align-right" href="https://www.mesvolontes.net/"><p class="align-right mt-1">www.mesvolontes.net</p></a>
+            </div>
+          </article>
+          <article class="col-6 col-12-xsmall work-item">
+            <div class="image fit">
+              <img src="images/fulls/psy.webp" alt="app.psyoflife.com" />
+            </div>
+            <div class="info">
+              <h3 class="bold mt-1 pol">Psy of life</h3>
+              <h5>Public home page, profile, invoices and schedule.<br/> + Admin app</h5>
+              <hr />
+              <div class="row">
+                <div class="col-3">
+                  <p>Stack :</p>
+                </div>
+                <div class="col-2">
+                  <img width="100%" src="images/icons/nuxt.png" alt="NuxtJs" />
+                </div>
+                <div class="col-2">
+                  <img width="100%" src="images/icons/mongo.png" alt="MongoDb" />
+                </div>
+                <div class="col-2">
+                  <img width="100%" src="images/icons/node.png" alt="NodeJs" />
+                </div>
+                <div class="col-2">
+                  <img
+                    width="100%"
+                    src="images/icons/express.png"
+                    alt="ExpressJs"
+                  />
+                </div>
+              </div>
+			  <a class="align-right" href="https://app.psyoflife.com/psychologues"><p class="align-right mt-1">app.psyoflife.com</p></a>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="two2">
+        <h2 class="brand bold">Training</h2>
+        <div class="row">
+          <article class="col-6 col-12-xsmall work-item">
+            <div class="image fit">
+              <img src="images/fulls/dumb.webp" alt="dumb_conversions" />
+            </div>
+            <div class="info">
+              <h3 class="bold mt-1 dumb">Dumb converter</h3>
+              <h5>Front-end, dynamic content and animations.</h5>
+              <hr />
+              <div class="row">
+                <div class="col-3">
+                  <p>Stack :</p>
+                </div>
+                <div class="col-2">
+                  <img width="100%" src="images/icons/react.png" alt="ReactJs" />
+                </div>
+                <div class="col-2">
+                  <img
+                    width="100%"
+                    src="images/icons/tailwind.png"
+                    alt="TailwindCss"
+                  />
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="col-6 col-12-xsmall work-item">
+            <div class="image fit">
+              <img src="images/fulls/vinted.webp" alt="vinted-clone" />
+            </div>
+            <div class="info">
+              <h3 class="bold mt-1 vinted">Vinted clone</h3>
+              <h5>Front-end, signup/login, cart and orders.</h5>
+              <hr />
+              <div class="row">
+                <div class="col-3">
+                  <p>Stack :</p>
+                </div>
+                <div class="col-2">
+                  <img width="100%" src="images/icons/react.png" alt="ReactJs" />
+                </div>
+                <div class="col-2">
+                  <img width="100%" src="images/icons/sass.png" alt="Sass" />
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="col-6 col-12-xsmall work-item">
+            <div class="image fit">
+              <img src="images/fulls/marvel.webp" alt="" />
+            </div>
+            <div class="info">
+              <h3 class="bold mt-1 marvel">Marvel collection</h3>
+              <h5>
+                Front end : search bar, pagination.
+              </h5>
+              <hr />
+              <div class="row">
+                <div class="col-3">
+                  <p>Stack :</p>
+                </div>
+                <div class="col-2">
+                  <img width="100%" src="images/icons/react.png" alt="ReactJs" />
+                </div>
+                <div class="col-2">
+                  <img width="100%" src="images/icons/sass.png" alt="Sass" />
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="col-6 col-12-xsmall work-item">
+            <div class="image fit">
+              <img src="images/fulls/amazon.webp" alt="" />
+            </div>
+            <div class="info">
+              <h3 class="bold mt-1">Amazon clone</h3>
+              <h5>My first attempt with React.</h5>
+              <hr />
+              <div class="row">
+                <div class="col-3">
+                  <p>Stack :</p>
+                </div>
+                <div class="col-2">
+                  <img width="100%" src="images/icons/react.png" alt="ReactJs" />
+                </div>
+                <div class="col-2">
+                  <img width="100%" src="images/icons/sass.png" alt="Sass" />
+                </div>
+                <div class="col-2">
+                  <img
+                    width="100%"
+                    src="images/icons/firebase.png"
+                    alt="Firebase"
+                  />
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="two3">
+        <h2 class="brand bold">Personal project</h2>
+        <div class="row">
+          <article class="col-6 col-12-xsmall work-item">
+            <div class="image fit">
+              <img src="images/fulls/mayo.webp" alt="ecommerce_example" />
+            </div>
+            <div class="info">
+              <h3 class="bold mt-1 mayo">Ketchup Maillots (ecommerce)</h3>
+              <h5>Front-end, home page and product card.</h5>
+              <hr />
+              <div class="row">
+                <div class="col-3">
+                  <p>Stack :</p>
+                </div>
+                <div class="col-2">
+                  <img width="100%" src="images/icons/vue.png" alt="VueJs" />
+                </div>
+                <div class="col-2">
+                  <img width="100%" src="images/icons/sass.png" alt="sass" />
+                </div>
+                <div class="col-2">
+                  <img width="100%" src="images/icons/mongo.png" alt="MongoDb" />
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="col-6 col-12-xsmall work-item">
+            <div class="image fit">
+              <img src="images/fulls/artistes.webp" alt="social_network" />
+            </div>
+            <div class="info">
+              <h3 class="bold mt-1 artistes">Les Artistes (social network)</h3>
+              <h5>
+                Profil, posts and following with my stain theme.
+              </h5>
+              <hr />
+              <div class="row">
+                <div class="col-3">
+                  <p>Stack :</p>
+                </div>
+                <div class="col-2">
+                  <img width="100%" src="images/icons/react.png" alt="ReactJs" />
+                </div>
+                <div class="col-2">
+                  <img width="100%" src="images/icons/redux.png" alt="Redux" />
+                </div>
+                <div class="col-2">
+                  <img width="100%" src="images/icons/mongo.png" alt="MongoDb" />
+                </div>
+                <div class="col-2">
+                  <img width="100%" src="images/icons/node.png" alt="NodeJs" />
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+	  <section id="two4">
+		<h2 class="brand bold">My Resume</h2>
+        <div class="cvs">
+			<img src="images/cv-ve.png" alt="my_cv">
+		</div>
+	  </section>
+
+      <!-- Three -->
+      <section id="three">
+        <h2 class="brand bold">Get In Touch</h2>
+        <p>
+          I wish to improve my skills and knowledge about dapp, smart contracts,
+          defi, nft, play-to-earn and all stuffs around web 3.0. <br />You can
+          acclaim my purpose and encourage me could be a little part of my
+          success. You can give me some advices, tips or snippets. I know it
+          needs more details but you can also tell your feelings about this
+          portfolio. <br />You can send an e-mail in French or in English using
+          the form below.
+        </p>
+        <div class="row">
+          <div class="col-8 col-12-small">
+            <form id="contact-form">
+				<div class="row gtr-uniform gtr-50">
+					<input type="hidden" name="contact_number">
+					<div class="col-6 col-12-xsmall">
+						<input type="text" name="user_name" id="name" placeholder="Name" />
+					</div>
+					<div class="col-6 col-12-xsmall">
+					<input type="email" name="user_email" id="email" placeholder="Email"/>
+					</div>
+					<div class="col-12">
+					<textarea
+						name="message"
+						id="message"
+						placeholder="Message"
+						rows="4"
+					></textarea>
+					</div>
+					<div class="col-6 col-12-xsmall">
+						<input id="submit" type="submit" value="Send Message" />
+					</div>
+					<div class="col-6 col-12-xsmall">
+						<span id="success" class="bg-brand hidden">Sent !</span>
+					</div>
+				</div>	  
+			</form>
+          </div>
+          <div class="col-4 col-12-small">
+            <ul class="labeled-icons">
+              <li>
+                <h3 class="icon solid fa-home">
+                  <span class="label">Address</span>
+                </h3>
+                76 av. JFK<br />
+                Corbeil-essonnes, 91100<br />
+                France
+              </li>
+              <li>
+                <h3 class="icon solid fa-mobile-alt">
+                  <span class="label">Phone</span>
+                </h3>
+                +33 (0)6 74 56 04 90
+              </li>
+              <li>
+                <h3 class="icon solid fa-envelope">
+                  <span class="label">Email</span>
+                </h3>
+                <span>jordanelepart@gmail.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Four -->
+      <!--
+					<section id="four">
+						<h2>Elements</h2>
+
+						<section>
+							<h4>Text</h4>
+							<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+							This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+							This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+							<hr />
+							<header>
+								<h4>Heading with a Subtitle</h4>
+								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+							</header>
+							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+							<header>
+								<h5>Heading with a Subtitle</h5>
+								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+							</header>
+							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+							<hr />
+							<h2>Heading Level 2</h2>
+							<h3>Heading Level 3</h3>
+							<h4>Heading Level 4</h4>
+							<h5>Heading Level 5</h5>
+							<h6>Heading Level 6</h6>
+							<hr />
+							<h5>Blockquote</h5>
+							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+							<h5>Preformatted</h5>
+							<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+print 'Iteration ' + i;
+deck.shuffle();
+i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+						</section>
+
+						<section>
+							<h4>Lists</h4>
+							<div class="row">
+								<div class="col-6 col-12-xsmall">
+									<h5>Unordered</h5>
+									<ul>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Sagittis adipiscing lorem eleifend.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ul>
+									<h5>Alternate</h5>
+									<ul class="alt">
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Sagittis adipiscing lorem eleifend.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ul>
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<h5>Ordered</h5>
+									<ol>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Etiam vel felis at lorem sed viverra.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Etiam vel felis at lorem sed viverra.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ol>
+									<h5>Icons</h5>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+										<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+										<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
+									</ul>
+								</div>
+							</div>
+							<h5>Actions</h5>
+							<ul class="actions">
+								<li><a href="#" class="button primary">Default</a></li>
+								<li><a href="#" class="button">Default</a></li>
+							</ul>
+							<ul class="actions small">
+								<li><a href="#" class="button primary small">Small</a></li>
+								<li><a href="#" class="button small">Small</a></li>
+							</ul>
+							<div class="row">
+								<div class="col-6 col-12-small">
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+								</div>
+								<div class="col-6 col-12-small">
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary small">Small</a></li>
+										<li><a href="#" class="button small">Small</a></li>
+									</ul>
+								</div>
+								<div class="col-6 col-12-small">
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary fit">Default</a></li>
+										<li><a href="#" class="button fit">Default</a></li>
+									</ul>
+								</div>
+								<div class="col-6 col-12-small">
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary small fit">Small</a></li>
+										<li><a href="#" class="button small fit">Small</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+
+						<section>
+							<h4>Table</h4>
+							<h5>Default</h5>
+							<div class="table-wrapper">
+								<table>
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Description</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Item One</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Two</td>
+											<td>Vis ac commodo adipiscing arcu aliquet.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Three</td>
+											<td> Morbi faucibus arcu accumsan lorem.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Four</td>
+											<td>Vitae integer tempus condimentum.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Five</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="2"></td>
+											<td>100.00</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+
+							<h5>Alternate</h5>
+							<div class="table-wrapper">
+								<table class="alt">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Description</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Item One</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Two</td>
+											<td>Vis ac commodo adipiscing arcu aliquet.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Three</td>
+											<td> Morbi faucibus arcu accumsan lorem.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Four</td>
+											<td>Vitae integer tempus condimentum.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Five</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="2"></td>
+											<td>100.00</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</section>
+
+						<section>
+							<h4>Buttons</h4>
+							<ul class="actions">
+								<li><a href="#" class="button primary">Primary</a></li>
+								<li><a href="#" class="button">Default</a></li>
+							</ul>
+							<ul class="actions">
+								<li><a href="#" class="button large">Large</a></li>
+								<li><a href="#" class="button">Default</a></li>
+								<li><a href="#" class="button small">Small</a></li>
+							</ul>
+							<ul class="actions fit">
+								<li><a href="#" class="button primary fit">Fit</a></li>
+								<li><a href="#" class="button fit">Fit</a></li>
+							</ul>
+							<ul class="actions fit small">
+								<li><a href="#" class="button primary fit small">Fit + Small</a></li>
+								<li><a href="#" class="button fit small">Fit + Small</a></li>
+							</ul>
+							<ul class="actions">
+								<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+								<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+							</ul>
+							<ul class="actions">
+								<li><span class="button primary disabled">Primary</span></li>
+								<li><span class="button disabled">Default</span></li>
+							</ul>
+						</section>
+
+						<section>
+							<h4>Form</h4>
+							<form method="post" action="#">
+								<div class="row gtr-uniform gtr-50">
+									<div class="col-6 col-12-xsmall">
+										<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+									</div>
+									<div class="col-6 col-12-xsmall">
+										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+									</div>
+									<div class="col-12">
+										<select name="demo-category" id="demo-category">
+											<option value="">- Category -</option>
+											<option value="1">Manufacturing</option>
+											<option value="1">Shipping</option>
+											<option value="1">Administration</option>
+											<option value="1">Human Resources</option>
+										</select>
+									</div>
+									<div class="col-4 col-12-small">
+										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+										<label for="demo-priority-low">Low Priority</label>
+									</div>
+									<div class="col-4 col-12-small">
+										<input type="radio" id="demo-priority-normal" name="demo-priority">
+										<label for="demo-priority-normal">Normal Priority</label>
+									</div>
+									<div class="col-4 col-12-small">
+										<input type="radio" id="demo-priority-high" name="demo-priority">
+										<label for="demo-priority-high">High Priority</label>
+									</div>
+									<div class="col-6 col-12-small">
+										<input type="checkbox" id="demo-copy" name="demo-copy">
+										<label for="demo-copy">Email me a copy of this message</label>
+									</div>
+									<div class="col-6 col-12-small">
+										<input type="checkbox" id="demo-human" name="demo-human" checked>
+										<label for="demo-human">I am a human and not a robot</label>
+									</div>
+									<div class="col-12">
+										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+									</div>
+									<div class="col-12">
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="primary" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</div>
+								</div>
+							</form>
+						</section>
+
+						<section>
+							<h4>Image</h4>
+							<h5>Fit</h5>
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-12"><span class="image fit"><img src="images/fulls/05.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/04.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/05.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/06.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
+								</div>
+							</div>
+							<h5>Left &amp; Right</h5>
+							<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+							<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+						</section>
+
+					</section>
+				--></div>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="inner">
+        <ul class="icons">
+          <li>
+            <a href="https://www.instagram.com/dededeveloperfu/" class="icon brands fa-instagram"
+              ><span class="label">Instagram</span></a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/JordaneLepartideveloppiste" class="icon brands fa-github"
+              ><span class="label">Github</span></a
+            >
+          </li>
+          <li>
+            <a href="https://wa.me/3674560490" class="icon brands fa-whatsapp"
+              ><span class="label">WhatsApp</span></a
+            >
+          </li>
+          <li>
+            <a href="mailto:jordanelepart@gmail.com,dededeveloperfu@proton.me" class="icon solid fa-envelope"
+              ><span class="label">Email</span></a
+            >
+          </li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; 2023 - dededeveloperfu</li>
+          <li>Design : <a href="http://html5up.net">HTML5 UP</a></li>
+          <li>Image : <a href="https://www.pexels.com/">Tobias Bjørkli</a></li>
+          <li>Icons : <a href="https://icons8.com/">icons8</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
